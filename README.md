@@ -1,4 +1,4 @@
-pilite-drawing-board
+Raspberry PILite drawing board
 ====================
 
 Web based drawing board for the Raspberry Pi PiLite LED Board.
