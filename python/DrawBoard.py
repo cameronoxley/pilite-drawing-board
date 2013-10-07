@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-import serial, time
+import serial, time, sys
 
 
 s = serial.Serial()
@@ -18,8 +18,15 @@ except serial.SerialException, e:
 s.write("$$$ALL,OFF\r")
 
 try:
-    mode=int(raw_input('Paste input string:'))
-    s.write("$$$F"+mode+"\r")
+	unformat=raw_input('Paste input string:')
+	mode=int(unformat)
+	while True:
+		try:
+			s.write("$$$F"+unformat+"\r")
+			time.sleep(10)
+		except KeyboardInterrupt:
+			s.write("$$$ALL,OFF\r")
+			print "Stopping"
+			sys.exit()
 except ValueError:
     print "Invalid command"
-
