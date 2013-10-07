@@ -1,5 +1,5 @@
-/*!
- * jQuery Raspberry Pi LED Board Display Grid
+/**
+ * jQuery Raspberry PiLite LED Board Display Grid
  * http://forty96.com
  *
  * Dependencies:
@@ -8,8 +8,6 @@
  *
  * Copyright 2013 Forty96
  * Released under the MIT license
- *
- * Date: 2013-10-05
  */
 $(function() {
 
