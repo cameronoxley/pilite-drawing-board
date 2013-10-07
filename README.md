@@ -7,11 +7,13 @@ Web based drawing board for the Raspberry Pi PiLite LED Board.
 
 ###Design a picture using the webpage:
 Open *index.html*, draw a picture by clicking or dragging over the grid.
+
 To select multiple blocks, you will need to hold the multi-select button on your keyboard. (*alt* on Windows, *cmd* on Mac)
 
 Once you've finished your drawing you will see an output string at the bottom of the page: e.g.
 
-000000000001110000011111000011111100001111110000111111000111111001111110011111100011111000001110000000000000000000000000000000
+0000000000011100000111110000111111000011111100001111110001111110011111100111111000111110000011
+10000000000000000000000000000000
 
 Simply copy and paste the output string into one of the methods below to view it on the PiLite.
 
