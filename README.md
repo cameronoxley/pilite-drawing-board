@@ -1,9 +1,9 @@
-Raspberry PILite drawing board
+Raspberry PiLite drawing board
 ====================
 
 Web based drawing board for the Raspberry Pi PiLite LED Board.
 
-**Note: make sure you have setup Raspberry Pi to connect with the PiLite before running any of the examples below.**
+**Note: make sure you have [setup](http://openmicros.org/index.php/articles/94-ciseco-product-documentation/raspberry-pi/283-setting-up-my-raspberry-pi) Raspberry Pi to connect with the PiLite before running any of the examples below.**
 
 ###Design a picture using the webpage:
 Open *index.html*, draw a picture by clicking or dragging over the grid.
