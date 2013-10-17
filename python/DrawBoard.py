@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
-
 import serial, time, sys
-
 
 s = serial.Serial()
 s.baudrate = 9600
