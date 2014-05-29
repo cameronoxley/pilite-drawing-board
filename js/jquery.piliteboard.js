@@ -28,7 +28,7 @@ $(function() {
             var result = $( "#select-result" ).empty();
 
             //Sort by ID
-            $("li").sort(function (a, b) {
+            $("#selectable > li").sort(function (a, b) {
                 return (~~a.id > ~~b.id) ? 1 : -1;
 
             }).each(function(){

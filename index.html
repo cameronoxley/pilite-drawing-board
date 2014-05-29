@@ -1,15 +1,96 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>PiLite Grid Drawing tool</title>
-    <link rel="stylesheet" href="stylesheets/selectable.css" />
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="js/jquery.piliteboard.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A simple drawing board for the Raspberry-Pi PiLite.">
+<title>Pi Lite Drawing Board</title>
+<link rel="stylesheet" href="css/pure.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+<link rel="stylesheet" href="css/selectable.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.piliteboard.js"></script>
 </head>
 <body>
-    <ul id="selectable"></ul>
-    <p id="select-result"></p>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <ul>
+              <li><a href="#setup">Setup</a></li>
+              <li><a href="#design">Design</a></li>
+              <li><a href="#python">Python</a></li>
+              <li><a href="#minicom">Minicom</a></li>
+                <li><a href="#issues">Issues</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>PiLite Drawing Board</h1>
+            <h2>A simple drawing board for the Raspberry-Pi PiLite</h2>
+        </div>
+
+        <div class="content">
+            <h2 class="content-subhead" id="setup">Setup</h2>
+            <p>
+                <em>Note: make sure you have <a href="http://openmicros.org/index.php/articles/94-ciseco-product-documentation/raspberry-pi/283-setting-up-my-raspberry-pi">setup</a> your Raspberry Pi to connect with the PiLite before running any of the examples below.</em>
+            </p>
+            <h2 class="content-subhead" id="design">Design a picture using the grid:</h2>
+            <p>
+                Draw a picture by clicking or dragging over the grid below.<br/>
+                To select multiple blocks, you will need to hold the multi-select button on your keyboard. (<em>alt</em> on Windows, <em>cmd</em> on Mac)<br/>
+                Once you've finished your drawing you will see an output string at the bottom of the page: e.g.<br/><br/>
+                <pre>000000000001110000011111000011111100001111110000111111000111111001111110011111100011111000001110000000000000000000000000000000</pre><br/><br/>
+                Simply copy and paste the output string into one of the methods below to view it on the PiLite.
+            </p>
+
+            <div class="pure-g">
+                <div class="5-5"><ul id="selectable"></ul></div>
+            </div>
+                <h2 class="content-subhead">Output:</h2>
+                <p id="select-result"></p>
+            <br/>
+            <hr/>
+              <h2 class="content-subhead" id="python">Using the Python script</h2>
+              <p>
+                Design a picture using the webpage as described above.<br/>
+                Run <code>python ./DrawBoard</code><br/>
+                Paste the output binary string once prompted.
+            </p>
+            <h2 class="content-subhead" id="minicom">Using Minicom:</h2>
+            <p>
+                Design a picture using the webpage as described above.<br/>
+                Run minicom through the terminal on the device: e.g.<br/>
+                <code>minicom -b 9600 -o -D /dev/ttyAMA0</code><br/>
+                Type: <code>$$$</code> in the minicom terminal to go to command mode, it should display <em>OK</em> on the terminal screen.<br/>
+                Type: <code>F</code><br/>
+                Paste the output binary string into minicom and press carriage return.<br/>
+                Your picture should now be displayed on the PiLite LED Board.<br/>
+                To clear the text, press carriage return.<br/><br/>
+            </p>
+            <h2 class="content-subhead" id="issues">Issues/Comments:</h2>
+            <p>
+                <a href="https://github.com/cameronoxley">View the Repository</a>
+            </p>
+            <div class="right"><a class="gh" href="https://github.com/cameronoxley"><img class="gh" src="img/github.png"/></a></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/ui.js"></script>
 </body>
 </html>

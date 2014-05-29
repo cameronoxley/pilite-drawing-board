@@ -1,32 +1,21 @@
-
-	body {
-		background: #fff;
-		color: #333332;
-		font-family:  Monaco, 'Courier New', Courier, monospace;
-		-webkit-font-smoothing: antialiased;
-		-webkit-text-size-adjust: 100%;
-	}
-
-	p {
+	#select-result, pre {
 		word-wrap: break-word;
 	}
 
-	#selectable .ui-selecting { background: #c52f30; }
-	#selectable .ui-selected { background: #c32a35; color: white; }
+	#selectable .ui-selecting { background: #d66969; }
+	#selectable .ui-selected { background: #a55151; color: white; }
 	#selectable {list-style-type: none; margin: 0; padding: 0; width: 900px; }
 	#select-result {width: 850px; margin: 0; padding: 0;}
 	#selectable li { margin: 0; padding: 0; float: left; width: 60px; height: 60px;}
 	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-		border: 1px solid #d3d3d3;
-		background: #ddd;
+		border: 1px solid #d8d8d8;
+		background: #5178a5;
 		font-weight: normal;
 		color: #555555;
 	}
 
 	#selectable, #select-result {
 		display: block;
-	  	margin-left: auto;
-	  	margin-right: auto;
 	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
