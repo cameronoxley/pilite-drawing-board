@@ -210,7 +210,7 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 1200px) {
+@media (min-width: 1800px) {
 
     .header,
     .content {

@@ -1,4 +1,47 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+/* Fonts */
+@font-face {
+    font-family: 'git-opts';
+    src: url('../fonts/git-opts.eot?55014774');
+    src: url('../fonts/git-opts.eot?55014774#iefix') format('embedded-opentype'),
+       url('../fonts/git-opts.woff?55014774') format('woff'),
+       url('../fonts/git-opts.ttf?55014774') format('truetype'),
+       url('../fonts/git-opts.svg?55014774#git-opts') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "git-opts";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    font-variant: normal;
+    text-transform: none;
+
+    font-size: 250%; 
+}
+ 
+.icon-github:before { content: '\e800'; } /* '' */
+.icon-download:before { content: '\e801'; } /* '' */
+.icon-fork:before { content: '\e802'; } /* '' */
+
+
+@import url("//fonts.googleapis.com/css?family=Lato:400italic,700italic,400,300,700");
+
+/* Demo */
+
+html, body, pure-g, menu, p, h1, h2, li, header, content-subhead, content {
+    font-family: 'Lato', FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
 
 code {
     background-color: #4b4b4b;
@@ -13,6 +56,10 @@ a, a:visited {
     border-bottom: 2px dotted #5178a5;
 }
 
+.icon {
+    max-width: 100%;
+}
+
 a:hover, a:active {
     color: #6999d3;
 }
@@ -21,14 +68,36 @@ a:hover, a:active {
     border-bottom: none;
 }
 
-.gh {
-    width: 32px;   
-    border-bottom: none;
+.gh a {
+    border: none;
+    color: #4b4b4b;
+}
+
+.gh a:hover, .gh a:active {
+    border: none;
+    color: #6999d3;
 }
 
 .right {
     float: right;
     padding: 20px;
+}
+
+.git-actions {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 100%;
+}
+
+.git-actions a {
+    border: none;
+    display: block;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.menu-sep {
+    border-bottom: 1px solid #cccccc;
 }
 
 #select-result {
