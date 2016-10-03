@@ -1,11 +1,13 @@
-Raspberry PiLite drawing board
-====================
+# Raspberry PiLite drawing board
 
 Web based drawing board for the Raspberry Pi PiLite LED Board.
 
 **Note: make sure you have [setup](http://openmicros.org/index.php/articles/94-ciseco-product-documentation/raspberry-pi/283-setting-up-my-raspberry-pi) Raspberry Pi to connect with the PiLite before running any of the examples below.**
 
-###Design a picture using the webpage:
+## Design a picture using the webpage:
+
+View the grid on the [Github site](http://cameronoxley.github.io/pilite-drawing-board/) or download the repo:
+
 Open *index.html*, draw a picture by clicking or dragging over the grid.
 
 To select multiple blocks, you will need to hold the multi-select button on your keyboard. (*alt* on Windows, *cmd* on Mac)
@@ -16,16 +18,12 @@ Once you've finished your drawing you will see an output string at the bottom of
 
 Simply copy and paste the output string into one of the methods below to view it on the PiLite.
 
-####Using the Python script:
-
-Design a picture using the webpage as described above.
+## Using the Python script:
 
 Run `python ./DrawBoard`
 Paste the output binary string once prompted.
 
-####Using Minicom:
-
-Design a picture using the webpage as described above.
+## Using Minicom:
 
 Run minicom through the terminal on the device: e.g.
 
